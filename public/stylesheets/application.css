@@ -5,3 +5,7 @@ body {
 ul, li {
     list-style: none;
 }
+
+.recordly-list {
+    padding-left: 0;
+}
