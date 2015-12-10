@@ -1,8 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../test_config.rb')
 
-describe "Song Model" do
+describe "Album Model" do
   it 'can construct a new instance' do
-    @song = Song.new
-    refute_nil @song
+    @album = Album.new
+    refute_nil @album
   end
 end
