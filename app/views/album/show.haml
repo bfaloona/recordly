@@ -1,0 +1,13 @@
+%h2
+	%i.icon.icon-list-ul
+	#{@album.name}
+
+%h4
+	%i.icon.icon-user
+	- link_to @album.artist.name, url_for(:artist_show, id: @album.artist.id)
+
+%ul
+	- @album.songs.each do |song|
+		%li
+			%i.icon.icon-music
+			#{song.name} (#{song.artist.name})

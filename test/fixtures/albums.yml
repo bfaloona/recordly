@@ -1,0 +1,10 @@
+---
+- id: 1
+  name: Elegancia Tropical
+  artist_id: 1
+- id: 2
+  name: Obrigado Brazil
+  artist_id: 2
+- id: 3
+  name: Hush
+  artist_id: 2

@@ -1,0 +1,17 @@
+---
+- id: 1
+  name: Grace
+  artist_id: 2
+  album_id: 2
+- id: 2
+  name: Stars
+  artist_id: 2
+  album_id: 2
+- id: 3
+  name: Bosque
+  artist_id: 1
+  album_id: 1
+- id: 4
+  name: Yo-Yo Bomba Yo
+  artist_id: 2
+  album_id: 1
