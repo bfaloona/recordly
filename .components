@@ -1,0 +1,9 @@
+---
+:orm: activerecord
+:test: minitest
+:mock: none
+:script: jquery
+:renderer: haml
+:stylesheet: none
+:namespace: Recordly
+:migration_format: number

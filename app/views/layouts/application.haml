@@ -1,0 +1,22 @@
+!!! 5
+%html{lang: 'en'}
+	%head
+		%title= @title.present? ? "#{@title} | Recordly" : 'Recordly'
+
+		= javascript_include_tag 'jquery', 'bootstrap', 'application'
+		= stylesheet_link_tag 'normalize', 'bootstrap', 'application'
+		%script{src: "https://use.fonticons.com/b2523290.js"}
+		= yield_content :include
+
+	%body
+		.container
+
+			.left-column.col-xs-2
+				.empty
+
+			.center-column.col-xs-8
+
+				= yield
+
+			.right-column.col-xs-2
+				.empty
