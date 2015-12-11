@@ -14,7 +14,7 @@ describe "/search" do
 
   it "should not return items for '/search/zz'" do
     get "/search/zz"
-    assert_match /nothing here/, last_response.body
+    assert_match /No matches for/, last_response.body
   end
 
 end
