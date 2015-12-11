@@ -25,4 +25,14 @@ describe "/search" do
     assert_match /No matches for/, last_response.body
   end
 
+  it "should return items that match case" do
+    get "/search/Grace"
+    assert_match /Grace/, last_response.body
+  end
+
+  it "should return items without regard to case" do
+    get "/search/grace"
+    assert_match /Grace/, last_response.body
+  end
+
 end
