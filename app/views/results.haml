@@ -1,0 +1,25 @@
+.jquery-search-replace
+	/ Contents of this div replaced by key up triggered jquery ajax call
+
+	- if @results.empty?
+		%br
+		%br
+		.recordly-empty-message
+			There's nothing here. :(
+	- else
+
+		%ul.recordly-list
+			- @results.each do |item|
+				%li
+					- if item.is_a? Artist
+						%i.icon.icon-user
+						= link_to item.name, url_for(:artist, :show, item.id)
+					- elsif item.is_a? Album
+						%img{src: '/images/icon-record.png'}
+						= link_to item.name, url_for(:album, :show, item.id)
+					- elsif item.is_a? Song
+						%i.icon.icon-music
+						= link_to item.name, url_for(:song, :show, item.id)
+						(
+						= link_to item.artist.name, url_for(:artist, :show, item.artist.id)
+						)
