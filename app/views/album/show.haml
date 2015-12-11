@@ -1,13 +1,19 @@
-%h2
-	%i.icon.icon-list-ul
-	#{@album.name}
+.jquery-search-replace
+	/ Contents of this div replaced by key up triggered jquery ajax call
 
-%h4
+	%h2
+		%img{src: '/images/icon-record-2x.png'}
+		#{@album.name}
 	%i.icon.icon-user
-	- link_to @album.artist.name, url_for(:artist_show, id: @album.artist.id)
+	= link_to @album.artist.name, url_for(:artist, :show, @album.artist.id)
+	%br
+	%br
 
-%ul
-	- @album.songs.each do |song|
-		%li
-			%i.icon.icon-music
-			#{song.name} (#{song.artist.name})
+	%ul
+		- @album.songs.each do |song|
+			%li
+				%i.icon.icon-music
+				= link_to song.name, url_for(:song, :show, song.id)
+				(
+				= link_to song.artist.name, url_for(:artist, :show, song.artist.id)
+				)

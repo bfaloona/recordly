@@ -2,12 +2,12 @@ Recordly::App.controllers :song do
   
   get :index do
     @songs = Song.all
-    render 'song/index'
+    render 'song/index', layout: (request.xhr? ? false : true)
   end
 
   get :show, map: "/song/:id/" do
     @song = Song.find_by_id(params[:id])
-    render 'song/show'
+    render 'song/show', layout: (request.xhr? ? false : true)
   end
 
   get :new do

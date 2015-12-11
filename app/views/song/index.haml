@@ -1,6 +1,11 @@
-%h1 Songs
-%ul
-  - @songs.each do |song|
-    %li
-      %i.icon.icon-music.icon-2x
-      #{song.name}
+.jquery-search-replace
+  / Contents of this div replaced by key up triggered jquery ajax call
+
+  %h1 Songs
+  %ul
+    - @songs.each do |song|
+      %li
+        %i.icon.icon-music.icon-2x
+        #{song.name}
+
+

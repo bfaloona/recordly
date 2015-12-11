@@ -1,6 +1,9 @@
-%h1 Artists
-%ul
-  - @artists.each do |artist|
-    %li
-      %i.icon.icon-user.icon-2x
-      #{artist.name}
+.jquery-search-replace
+  / Contents of this div replaced by key up triggered jquery ajax call
+
+  %h1 Artists
+  %ul
+    - @artists.each do |artist|
+      %li
+        %i.icon.icon-user.icon-2x
+        #{artist.name}

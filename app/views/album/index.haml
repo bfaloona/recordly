@@ -1,6 +1,9 @@
-%h1 Albums
-%ul
-  - @albums.each do |album|
-    %li
-      %i.icon.icon-list-ul.icon-2x
-      #{album.name}
+.jquery-search-replace
+  / Contents of this div replaced by key up triggered jquery ajax call
+
+  %h1 Albums
+  %ul
+    - @albums.each do |album|
+      %li
+        %img{src: '/images/icon-record.png'}
+        #{album.name}
