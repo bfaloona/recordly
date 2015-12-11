@@ -2,11 +2,11 @@
 - id: 1
   name: Grace
   artist_id: 2
-  album_id: 2
+  album_id: 3
 - id: 2
   name: Stars
   artist_id: 2
-  album_id: 2
+  album_id: 3
 - id: 3
   name: Bosque
   artist_id: 1
@@ -15,3 +15,11 @@
   name: Yo-Yo Bomba Yo
   artist_id: 2
   album_id: 1
+- id: 5
+  name: Dança Brasileira
+  artist_id: 2
+  album_id: 2
+- id: 6
+  name: 1 x 0 (Um a Zero)
+  artist_id: 2
+  album_id: 2
