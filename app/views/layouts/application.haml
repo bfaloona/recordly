@@ -38,6 +38,10 @@
 				});
 				$('#search-box').keyup(function(){
 					var query = $('#search-box').val();
+					if (query == '')
+					{
+						return true;
+					}
 					$.ajax({
 						url: "/search/" + query,
 						cache: false
