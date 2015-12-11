@@ -4,10 +4,9 @@
 	%h2
 		%img{src: '/images/icon-record-2x.png'}
 		#{@album.name}
-	%i.icon.icon-user
-	= link_to @album.artist.name, url_for(:artist, :show, @album.artist.id)
-	%br
-	%br
+	.detail
+		%i.icon.icon-user
+		= link_to @album.artist.name, url_for(:artist, :show, @album.artist.id)
 
 	%ul
 		- @album.songs.each do |song|

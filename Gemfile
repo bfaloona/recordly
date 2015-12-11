@@ -7,9 +7,13 @@ gem 'rake'
 gem 'haml'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
 gem 'pg'
+gem 'padrino-warden'
+gem 'bcrypt'
+
 
 # Padrino Stable Gem
 gem 'padrino', '0.13.0'
+
 
 
 group :test do

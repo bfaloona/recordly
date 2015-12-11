@@ -1,5 +1,9 @@
 Recordly::App.controllers :album do
-  
+
+  before do
+    login
+  end
+
   get :index do
     @albums = Album.all
     render 'album/index', layout: (request.xhr? ? false : true)

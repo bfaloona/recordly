@@ -8,6 +8,7 @@ require 'minitest/reporters'
 
 class MiniTest::Spec
   include Rack::Test::Methods
+  include Warden::Test::Helpers
 
   def app(app = nil, &blk)
     @app ||= block_given? ? app.instance_eval(&blk) : app

@@ -9,3 +9,16 @@ ul, li {
 .recordly-list {
     padding-left: 0;
 }
+
+.recordly-menu {
+    padding-top: 25px;
+}
+
+.search-form {
+    margin-left: -15px;
+}
+
+.detail {
+    padding-left: 10px;
+    padding-bottom: 20px;
+}

@@ -15,16 +15,19 @@
 				.empty
 
 			.center-column.col-xs-8
-				%form#search-form.navbar-form{role: ""}
-					.input-group
-						%input#search-box.form-control{:placeholder => "search", :type => "text", autocomplete: "off", action: "#"}
+				- unless /sessions|unauthenticated/.match request.env['PATH_INFO']
+					%form#search-form.navbar-form{role: ""}
+						.input-group
+							%input#search-box.form-control{:placeholder => "search", :type => "text", autocomplete: "off", action: "#"}
 
 				= yield
 
 			.right-column.col-xs-2
-				.recordly-menu.text-nowrap
+				.recordly-menu.text-nowrap.pull-right
+					Recordly
+					- if logged_in?
+						= surround('[', ']'){ link_to current_user.name, url_for(:sessions, :logout) }
 					%a{href: '/'}
-						Recordly
 						%img{src: '/favicon.ico'}
 
 		%script{type: 'text/javascript'}

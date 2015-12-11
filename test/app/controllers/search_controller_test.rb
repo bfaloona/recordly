@@ -2,6 +2,14 @@ require File.expand_path(File.dirname(__FILE__) + '/../../test_config.rb')
 
 describe "/search" do
 
+  before do
+    login_as User.find(1)
+  end
+
+  after do
+    Warden.test_reset!
+  end
+
   it "should return items for '/search/z'" do
     get "/search/z"
     assert_match /Brazil/, last_response.body

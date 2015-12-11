@@ -6,9 +6,9 @@
 * Test pipeline
 * Album and Song
 * Search
+* User login
 
 ## Next Steps
-* User login
 * Favorites
   * add user_item lookup table
   * helper function to render item w/ favorite ux

@@ -4,6 +4,7 @@
 	%h1
 		%i.icon.icon-music
 		#{@song.name}
+	.detail
 
-	%i.icon.icon-user
-	= link_to @song.artist.name, url_for(:artist, :show, @song.artist.id)
+		%i.icon.icon-user
+		= link_to @song.artist.name, url_for(:artist, :show, @song.artist.id)

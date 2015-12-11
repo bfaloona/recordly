@@ -1,5 +1,9 @@
 Recordly::App.controllers :artist do
 
+  before do
+    login
+  end
+
   get :index do
     @artists = Artist.all
     render 'artist/index', layout: (request.xhr? ? false : true)

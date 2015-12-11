@@ -1,5 +1,9 @@
 Recordly::App.controllers :search do
 
+  before do
+    login
+  end
+
   get :search, map: "/" do
     @query = params[:q]
     @results = []

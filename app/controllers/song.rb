@@ -1,5 +1,9 @@
 Recordly::App.controllers :song do
-  
+
+  before do
+    login
+  end
+
   get :index do
     @songs = Song.all
     render 'song/index', layout: (request.xhr? ? false : true)

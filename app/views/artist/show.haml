@@ -4,8 +4,10 @@
 	%h1
 		%i.icon.icon-user
 		#{@artist.name}
-	- @albums.each do |album|
-		%li
-			%img{src: '/favicon.ico'}
-			= link_to album.name, url_for(:album, :show, album.id)
+	.detail
+	%ul
+		- @albums.each do |album|
+			%li
+				%img{src: '/favicon.ico'}
+				= link_to album.name, url_for(:album, :show, album.id)
 
